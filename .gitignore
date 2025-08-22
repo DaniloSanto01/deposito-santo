@@ -1,6 +1,11 @@
 # Environment variables
 .env
-
+# Python virtual environments
+venv/
+env/
+.venv/
+ENV/
+.Python
 # Logs
 logs
 *.log

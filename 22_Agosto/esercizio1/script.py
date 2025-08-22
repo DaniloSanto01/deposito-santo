@@ -88,7 +88,7 @@ def get_response():
         model=deployment,
         messages=[
             {"role": "system", "content": "Sei un assistente utile."},
-            {"role": "user", "content": "Scrivimi un haiku sugli sviluppatori Python."}
+            {"role": "user", "content": "Scrivimi una piccola biografia su Lionel Messi."}
         ],
         max_tokens=200,
         temperature=0.2
