@@ -31,7 +31,7 @@ response = client.chat.completions.create(
         {"role": "user", "content": "Scrivimi un haiku sugli sviluppatori Python."}
     ],
     max_tokens=200,
-    temperature=2
+    temperature=0.2
 )
 
 # Stampo la risposta
