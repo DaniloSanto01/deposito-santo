@@ -1,5 +1,16 @@
 # Environment variables
 .env
+*.env*
+.env.*
+*.env
+env.*
+.environment
+environment
+config.env
+secrets.env
+variables.env
+.credentials
+credentials
 # Python virtual environments
 venv/
 env/

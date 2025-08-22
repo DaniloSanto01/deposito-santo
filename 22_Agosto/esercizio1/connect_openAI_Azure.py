@@ -83,12 +83,12 @@ Spiegazione di cosa fa:
     retry=retry_if_exception_type(RateLimitError),  # ritenta solo se è un RateLimitError (429)
     wait=wait_exponential(min=2, max=30),         # intervallo esponenziale tra retry: 2s → 4s → 8s ... max 30s
     stop=stop_after_attempt(5))
-def get_response():
+def get_response(prompt="Scrivimi una piccola biografia su Lionel Messi."):
     response = client.chat.completions.create(
         model=deployment,
         messages=[
-            {"role": "system", "content": "Sei un assistente utile."},
-            {"role": "user", "content": "Scrivimi una piccola biografia su Lionel Messi."}
+            {"role": "system", "content": "Sei un assistente in grado di rispondere a domande generiche"},
+            {"role": "user", "content": prompt}
         ],
         max_tokens=200,
         temperature=0.2
